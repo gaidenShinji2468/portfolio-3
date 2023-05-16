@@ -1,0 +1,12 @@
+#navbar a {
+  color: inherit;
+}
+
+#navbar .dropdown-menu {
+  background-color: inherit;
+  color: inherit;
+}
+
+#navbar .navbar-toggler {
+  border: none;
+}

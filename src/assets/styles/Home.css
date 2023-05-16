@@ -1,0 +1,23 @@
+#main {
+  height: 100vh; 
+  background: radial-gradient(ellipse at top, #343a40, transparent), radial-gradient(ellipse at bottom, #000, transparent);
+}
+
+#main > .row:first-child {
+  height: 100%;
+}
+
+#side-menu {
+  padding: 0;
+}
+
+#main > .row > .col:nth-child(2) {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 767px) {
+  #side-menu {
+    display: none;
+  }
+}

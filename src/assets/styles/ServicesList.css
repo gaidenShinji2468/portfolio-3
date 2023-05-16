@@ -1,0 +1,17 @@
+#services .accordion-body, #services .list-group-item {
+  color: var(--bs-secondary);
+  background-color: var(--bs-primary);
+}
+
+#services .list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  border-color: var(--bs-secondary);
+}
+
+#services img {
+  width: 35px;
+  height: 35px;
+}

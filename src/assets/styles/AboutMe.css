@@ -1,0 +1,10 @@
+.techs .list-group-item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.techs img {
+  width: 25px;
+  height: 25px;
+}

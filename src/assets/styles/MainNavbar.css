@@ -1,0 +1,22 @@
+#main-navbar {
+  position: sticky;
+  top: 0;
+}
+
+#main-navbar .container-fluid {
+  justify-content: flex-end;
+}
+
+#offcanvas-navbar-md {
+  width: 50%;
+}
+
+#offcanvas-navbar-md .offcanvas-body {
+  padding: 0;
+}
+
+@media screen and (min-width: 767px) {
+  #main-navbar #menu-nav {
+    display: none;
+  }
+}

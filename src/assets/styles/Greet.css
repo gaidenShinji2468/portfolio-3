@@ -1,0 +1,45 @@
+#greet {
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#greet h1 {
+  color: var(--bs-secondary);
+}
+
+#greet div {
+  width: 430px;
+}
+
+#greet h3 {
+  height: 35px;
+  padding-top: 4px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 5px solid var(--bs-primary);
+  animation: typewriter 4s steps(40) 1 alternate both, blink-text-cursor 500ms infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 430px;
+  }
+}
+
+@keyframes blink-text-cursor {
+  from {
+    border-right-color: var(--bs-primary);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}

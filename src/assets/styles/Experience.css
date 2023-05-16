@@ -1,0 +1,37 @@
+#experience img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#experience .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  height: 50px;
+}
+
+#experience .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 130px;
+}
+
+#experience .card-text:hover {
+  background-color: var(--bs-secondary);
+}
+
+#experience .card-text:hover a {
+  color: var(--bs-primary);
+  transform: translatex(10px);
+  transition: transform .3s ease-in-out;
+}
+
+#experience a {
+  display: block;
+  color: var(--bs-secondary);
+}
+
+
