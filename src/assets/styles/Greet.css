@@ -6,12 +6,18 @@
   justify-content: center;
 }
 
-#greet h1 {
-  color: var(--bs-secondary);
+#greet div {
+  width: 290px;
 }
 
-#greet div {
-  width: 430px;
+#greet h1 {
+  color: var(--bs-secondary);
+  font-size: 20px;
+}
+
+#greet h3 {
+  font-size: 14px;
+  color: black;
 }
 
 #greet h3 {
@@ -21,16 +27,66 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 5px solid var(--bs-primary);
-  animation: typewriter 4s steps(40) 1 alternate both, blink-text-cursor 500ms infinite;
+  animation: typewriter-xs 4s steps(40) 1 alternate both, blink-text-cursor 500ms infinite;
 }
 
-@keyframes typewriter {
+@media screen and (min-width: 575px) {
+  #greet div {
+    width: 380px;
+  }
+
+  #greet h1 {
+    font-size: 26px;
+  }
+
+  #greet h3 {
+    font-size: 20px;
+    animation: typewriter-sm 4s steps(40) 1 alternate both, blink-text-cursor 500ms infinite;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #greet div {
+    width: 440px;
+  }
+
+  #greet h1 {
+    font-size: 30px;
+  }
+
+  #greet h3 {
+    font-size: 24px;
+    animation: typewriter-md 4s steps(40) 1 alternate both, blink-text-cursor 500ms infinite;
+  }
+}
+
+@keyframes typewriter-xs {
   from {
     width: 0;
   }
 
   to {
-    width: 430px;
+    width: 290px;
+  }
+}
+
+@keyframes typewriter-sm {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 380px;
+  }
+}
+
+@keyframes typewriter-md {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 440px;
   }
 }
 

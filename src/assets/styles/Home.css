@@ -1,17 +1,17 @@
 #main {
-  height: 100vh; 
+  height: 100vh;
+  display: flex;
   background: radial-gradient(ellipse at top, #343a40, transparent), radial-gradient(ellipse at bottom, #000, transparent);
 }
 
-#main > .row:first-child {
-  height: 100%;
-}
-
 #side-menu {
-  padding: 0;
+  width: 250px;
+  height: 100%;
+  background-color: var(--bs-primary);
 }
 
-#main > .row > .col:nth-child(2) {
+#side-menu + div {
+  width: calc(100% - 250px);
   height: 100%;
   overflow-y: scroll;
 }
@@ -19,5 +19,9 @@
 @media screen and (max-width: 767px) {
   #side-menu {
     display: none;
+  }
+
+  #side-menu + div {
+    width: 100%;
   }
 }

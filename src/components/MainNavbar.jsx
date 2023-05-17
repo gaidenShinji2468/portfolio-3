@@ -10,14 +10,14 @@ function MainNavbar() {
 
   const handleClose = () => setShow(false);
 
-  const handleShow = () => setShow(true);
+  const handleToggle = () => setShow(!show);
 
   return (
     <Navbar id="main-navbar" expand="md">
       <Container fluid>
         <Navbar.Toggle
 	  aria-controls="offcanvas-navbar-md"
-	  onClick={handleShow}
+	  onClick={handleToggle}
 	/>
 	<Navbar.Offcanvas
           id="offcanvas-navbar-md"

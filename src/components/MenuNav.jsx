@@ -76,10 +76,10 @@ function MenuNav({action}) {
 
   return (
     <div id="menu-nav">
-      <Image
+      <img
+	type="image/jpg"
 	src={profilePhoto}
-	className="mb-3"
-        fluid	
+	alt="This is a profile photo"
       />
       <ul>
 	<li><h3>Romel Gil</h3></li>

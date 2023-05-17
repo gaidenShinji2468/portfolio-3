@@ -8,3 +8,7 @@
   width: 25px;
   height: 25px;
 }
+
+#about-me strong {
+  color: var(--bs-danger);
+}

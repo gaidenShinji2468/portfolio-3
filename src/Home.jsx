@@ -1,7 +1,5 @@
 import {useSelector} from "react-redux";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import MenuNav from "./components/MenuNav";
 import MainNavbar from "./components/MainNavbar";
 import Greet from "./components/Greet";
@@ -16,22 +14,20 @@ function Home() {
   const theme = useSelector(state => state.themeColor);
 
   return (
-    <Container id="main" fluid>
-      <Row>
-	<Col id="side-menu" xs={3}>
-          <MenuNav/>
-	</Col>
-	<Col>
-	  <MainNavbar/>
-	  <Greet/>
-	  <AboutMe/>
-	  <Services/>
-	  <Portfolio/>
-	  <Experience/>
-	  <ContactMe/>
-	</Col>
-      </Row>
-    </Container>
+    <div id="main">
+      <div id="side-menu">
+        <MenuNav/>
+      </div>
+      <div>
+        <MainNavbar/>
+	<Greet/>
+	<AboutMe/>
+	<Services/>
+	<Portfolio/>
+	<Experience/>
+	<ContactMe/>
+      </div>
+    </div>
   );
 }
 

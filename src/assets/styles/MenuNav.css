@@ -1,15 +1,25 @@
 #menu-nav {
-  min-height: 100%;
-  padding: 0;
+  height: 100%;
   background-color: var(--bs-primary);
-  color: var(--bs-secondary);
+}
+
+#menu-nav ul {
+  height: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#menu-nav img {
+  width: 250px;
+  height: 250px;
 }
 
 #menu-nav h3 {
   text-align: center;
   color: inherit;
-  margin-bottom: 30px;
   cursor: pointer;
+  margin: 10px 0;
 }
 
 #socials {
@@ -24,7 +34,14 @@
 }
 
 #menu-nav li:not(#menu-nav li:first-child):not(#socials):not(#menu-nav li:last-child) {
-  padding: 8px 10%;
+  padding: 0 10%;
+}
+
+#menu-nav li:not(#menu-nav li:first-child):not(#socials):not(#menu-nav li:last-child) a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--bs-secondary);
 }
 
 #menu-nav li:not(#menu-nav li:first-child):not(#socials):not(#menu-nav li:last-child):hover {
@@ -33,23 +50,13 @@
 }
 
 #menu-nav li:not(#menu-nav li:first-child):not(#socials):not(#menu-nav li:last-child):hover a {
+  color: var(--bs-primary);
   transform: translatex(10px);
   transition: transform .3s ease-in-out;
 }
 
 #menu-nav li a {
   text-transform: uppercase;
-}
-
-#menu-nav li a:not(#socials li a) {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: inherit;
-}
-
-#menu-nav li:last-child {
-  margin-top: 25px;
 }
 
 #menu-nav li:last-child span {
