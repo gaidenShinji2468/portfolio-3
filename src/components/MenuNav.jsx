@@ -22,7 +22,7 @@ import {
 import profilePhoto from "/images/profile_photo.jpg";
 import "/src/assets/styles/MenuNav.css";
 
-function MenuNav({action}) {
+function MenuNav({action = () => {}}) {
   const socials = [
     {
       content: <EnvelopeAtFill/>,
@@ -71,6 +71,11 @@ function MenuNav({action}) {
       title: "Contáctame",
       icon: <PersonLinesFill/>,
       link: "#contact-me"
+    },
+    {
+      title: "Descargar CV",
+      icon: <FileEarmarkArrowDownFill/>,
+      link: "/docs/cv.pdf"
     }
   ];
 
@@ -104,12 +109,22 @@ function MenuNav({action}) {
           menuNav.map((menuItem, i) => {
             return (
               <li key={i}>
-		<a
-		  href={menuItem.link}
-		  onClick={() => action()}
-		>
-		  {menuItem.icon}{menuItem.title}
-		</a>
+		{
+		  !menuItem.link.includes(".pdf") ?
+		  <a
+		    href={menuItem.link}
+		    onClick={() => action()}
+		  >
+		    {menuItem.icon}{menuItem.title}
+		  </a> :
+		  <a
+		    href={menuItem.link}
+		    onClick={() => action()}
+		    download=""
+		  >
+		    {menuItem.icon}{menuItem.title}
+		  </a>
+		}
 	      </li>
 	    );
 	  })
