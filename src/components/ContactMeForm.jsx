@@ -6,13 +6,17 @@ import {
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Button from "react-bootstrap/Button";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
 import "/src/assets/styles/ContactMeForm.css";
 
 function ContactMeForm() {
-  const [state, handleSubmit] = useForm("xqkowjyp");
-  
-  return ( 
-    <Form id="contact-me-form" onSubmit={handleSubmit}>
+  const [state, handleSubmit] = useForm("xqkoopqa");
+
+  return (
+    <Form id="contact-me-form" onSubmit={event => {
+      handleSubmit(event);
+      event.target.reset();
+    }}>
       <FloatingLabel
 	controlId="name"
 	label="Nombre"
@@ -20,6 +24,7 @@ function ContactMeForm() {
       >
         <Form.Control
 	  type="text"
+	  name="name"
 	  placeholder="Introduce tu nombre"
 	/>
 	<ValidationError 
@@ -35,6 +40,7 @@ function ContactMeForm() {
       >
         <Form.Control
 	  type="email"
+	  name="email"
 	  placeholder="Introduce tu email"
 	/>
 	<ValidationError 
@@ -49,6 +55,7 @@ function ContactMeForm() {
       >
         <Form.Control
 	  as="textarea"
+	  name="message"
 	  placeholder="Describe tu idea o projecto"
 	/>
 	<ValidationError 
@@ -57,11 +64,17 @@ function ContactMeForm() {
           errors={state.errors}
         />
       </FloatingLabel>
-      <Button
-	variant="primary"
-	type="submit"
-	disabled={state.submitting}
-      >Enviar</Button>
+      <ButtonGroup>
+        <Button
+	  variant="primary"
+	  type="submit"
+	  disabled={state.submitting}
+        >Enviar</Button>
+        <Button
+	  variant="secondary"
+	  type="reset"
+        >Cancelar</Button>
+      </ButtonGroup>
     </Form>
   );
 }
